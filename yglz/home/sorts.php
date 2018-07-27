@@ -53,7 +53,7 @@
 		<li><a href="">信息报送</a></li>     
 	</ul>
 </nav>
-<li><a href="../home/sorts/file.html" >上传数据文件</a></li>
+<li><a href="../home/sorts/file_upload.html" >上传数据文件</a></li>
 </body>
 <script src="../login/js/jquery-1.10.2.js"></script>
 <script>
