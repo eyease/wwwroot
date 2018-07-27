@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><!-- meta:uft -->
+	<!-- <meta charset="UTF-8"> -->  
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- meta:vp -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	<!-- meta:compat -->
+	<link rel="stylesheet" href="style.css"><!-- link:css -->
+	<script src=""></script>	<!-- script:src -->
+	<title>Document</title>
+	<style></style>
+</head>
+<body>
+	<!-- html:5 或者!可以生成html5文件结构	 -->
+	<p>1.生成带类样式的标签</p><!-- p -->
+	<p class="info"></p><!-- p.info -->
+	<div class="red"></div><!-- div.red -->
+	<div class="red"></div><!-- .red -->
+	<p>2.带ID的标签</p>
+	<h2 id="header"></h2><!-- h2#header -->
+	<div id="header"></div><!-- #header -->
+	<a href=""></a><!-- a -->
+	<a href="http://"></a><!-- a:link -->
+	<a href="mailto:"></a><!-- a:mail -->
+	<p>3.根据标签之间的位置关系来生成标签</p>
+	<!-- 生成同级，兄弟标签 -->
+	<h2 class="header"></h2>
+	<p class="info"></p><!-- h2.header+p.info -->
+	<!-- 后代标签，也叫下级标签： -->
+	<ul>
+		<li>
+			<li></li><!-- ul>li>li -->
+		</li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li><!-- ul>li+li+li -->
+		<li></li>
+	</ul>
+	<!-- 生成上级标签 --><!-- h2>span^p.info -->
+	<h2><span></span></h2><!-- h2>span -->
+
+	<h2><span></span></h2>
+	<p class="info"></p><!-- h2>span^p.info -->
+	<p>5.在生成标签的时候，同意创建内部的文本</p>
+	<a href="">七爷的网站</a><!-- a{七爷的网站} -->
+	<p title="这是一段文字"></p><!-- p[title="这是一段文字"] -->
+	<a href="" herf="www.phpe.com">七爷的网站</a><!-- a[herf="www.phpe.com"]{七爷的网站} -->
+	
+	<p>6重复生成</p>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li><!-- ul>li*5 -->
+		<li></li>
+		<li></li>
+	</ul>
+
+<!-- 快速生成一个有8个列表项的导航 -->
+<ul class="list">
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li><!-- ul.list>li.item*8>a{导航} -->
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li>
+	<li class="item"><a href="">导航</a></li>
+</ul>
+<p>给标签自动添加编号或排序：$,@</p>
+<ul class="list">
+	<li class="item"><a href="">导航1</a></li>
+	<li class="item"><a href="">导航2</a></li>
+	<li class="item"><a href="">导航3</a></li>
+	<li class="item"><a href="">导航4</a></li><!-- ul.list>li.item*8>a{导航$} -->
+	<li class="item"><a href="">导航5</a></li>
+	<li class="item"><a href="">导航6</a></li>
+	<li class="item"><a href="">导航7</a></li>
+	<li class="item"><a href="">导航8</a></li>
+</ul>
+
+<ul class="list">
+	<li class="item"><a href="">导航01</a></li>
+	<li class="item"><a href="">导航02</a></li>
+	<li class="item"><a href="">导航03</a></li>
+	<li class="item"><a href="">导航04</a></li><!-- ul.list>li.item*8>a{导航$$} -->
+	<li class="item"><a href="">导航05</a></li>
+	<li class="item"><a href="">导航06</a></li>
+	<li class="item"><a href="">导航07</a></li>
+	<li class="item"><a href="">导航08</a></li>
+</ul>
+
+<ul class="list">
+	<li class="item"><a href="">导航08</a></li>
+	<li class="item"><a href="">导航07</a></li>
+	<li class="item"><a href="">导航06</a></li>
+	<li class="item"><a href="">导航05</a></li>
+	<li class="item"><a href="">导航04</a></li><!-- ul.list>li.item*8>a{导航$$@-} -->
+	<li class="item"><a href="">导航03</a></li>
+	<li class="item"><a href="">导航02</a></li>
+	<li class="item"><a href="">导航01</a></li>
+</ul>
+
+<ul class="list">
+	<li class="item"><a href="">导航100</a></li>
+	<li class="item"><a href="">导航101</a></li>
+	<li class="item"><a href="">导航102</a></li>
+	<li class="item"><a href="">导航103</a></li><!-- ul.list>li.item*8>a{导航$$@100} -->
+	<li class="item"><a href="">导航104</a></li>
+	<li class="item"><a href="">导航105</a></li>
+	<li class="item"><a href="">导航106</a></li>
+	<li class="item"><a href="">导航107</a></li>
+</ul>
+
+<ul class="list">
+	<li class="item"><a href="">导航0100</a></li>
+	<li class="item"><a href="">导航0101</a></li>
+	<li class="item"><a href="">导航0102</a></li>
+	<li class="item"><a href="">导航0103</a></li><!-- ul.list>li.item*8>a{导航$$$$@100} -->
+	<li class="item"><a href="">导航0104</a></li>
+	<li class="item"><a href="">导航0105</a></li>
+	<li class="item"><a href="">导航0106</a></li>
+	<li class="item"><a href="">导航0107</a></li>
+</ul>
+</body>
+</html>
