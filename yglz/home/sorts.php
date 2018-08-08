@@ -23,34 +23,36 @@
 
 	<!-- 控制menu -->
 	<div class="nav-menu">
-		<span></span>
-		<span></span>
-		<span></span>
+		<span>1</span>
+		<span>2</span>
+		<span>2</span>
 	</div>
 
 	<!-- 菜单 -->
 	<ul class="nav-list">
-                    <li >
-                    <?php echo $id;?>
-                   </li>
+                   <li ><?php echo $id;?></li>
                    <li><a href="../logout.php">退出登录</a></li>
 		<li>
-			<a href="index.php" >首页<div class="carect"></div></a>
-			<ul class="menu">
-				<li><a href="">One</a></li>
-				<li><a href="">Two</a></li>
-			</ul>
+			<a href="index.php" class="active">首页<div class="carect"></div></a>
+				<ul class="menu">
+					<li><a href="index.php">One</a></li>
+					<li><a href="index.php">Two</a></li>
+				</ul>
 		</li>
-		<li><a href="sorts.php" class="active">临时清分数据核对</a></li>
-		<li><a href="txf.php" >通行费报表</a>
-			<ul class="menu">
-				<li><a href="">月平均</a></li>
-				<li><a href="">这平均</a></li>
-				<li><a href="">那平均</a></li>
-			</ul>
+		<li>
+			<a href="" class="active">清分数据核对<div class="carect"></div></a>
+				<ul class="menu">
+					<li><a href="sorts.php">清分数据文件上传</a></li>
+					<li><a href="">古城寨二义性文件上传</a></li>
+					<li><a href="">仁和二义性文件上传</a></li>
+				</ul>
 		</li>
+		<li><a href="sortstemp.php">清分核对结果</a></li>
+		<li><a href="txf.php">通行费报表</a></li>
 		<li><a href="">查漏补缺</a></li>
-		<li><a href="">信息报送</a></li>     
+		<li><a href="">信息报送</a></li>
+		
+                  
 	</ul>
 </nav>
 <li><a href="../home/sorts/file_upload.html" >上传数据文件</a></li>

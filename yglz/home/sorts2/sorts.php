@@ -33,14 +33,6 @@ $num=mysqli_num_rows($result);//统计执行结果影响的行数 这里表示�
 $starttime = explode(' ',microtime());
 // echo microtime();
 
-
-// for ($i=1; $i <$num+1 ; $i++) {  //根据重新编制的序号，逐条执行
-//     echo "这是第.$i.条记录";
-//     echo '<br/>';
-// }
-   
-   
-
 for ($i=1 ; $i <=$num ; $i++) {
     // $i=32678; 
     $sql="select * from sorts6_copy where 序号={$i}";
