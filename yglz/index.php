@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<script>window.location.href='./login/login.html';</script> 
+<script>window.location.href='./yglz/login/login.html';</script> 
 </body>
 </html>
 

@@ -11,6 +11,29 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/zd-1.0.css">
+	<script type="text/javascript">
+function loadXMLDoc(){
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","./sorts_in.php",true);
+xmlhttp.send();
+}
+</script>
+
 </head>
 <body>
 <nav>
@@ -33,8 +56,8 @@
 		<li>
 			<a href="index.php" class="active">首页<div class="carect"></div></a>
 				<ul class="menu">
-					<li><a href="index.php">One</a></li>
-					<li><a href="index.php">Two</a></li>
+					<li><a href="#" onclick="loadXMLDoc()">One</a></li>
+					<li><a href="#">Two</a></li>
 				</ul>
 		</li>
 		<li>
@@ -53,8 +76,9 @@
                   
 	</ul>
 </nav>
+
 <h3 style="text-align: center;line-height: 200px">什么都木有<br><br></h3>
- 
+ <div id="myDiv"></div>
 
 </body>
 <script src="../login/js/jquery-1.10.2.js"></script>
