@@ -14,7 +14,7 @@
 	<script src="js/echarts.min.js"></script>
 </head>
 <body>
-
+lalal 
 
 </body>
 <script src="../login/js/jquery-1.10.2.js"></script>

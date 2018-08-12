@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<link rel="stylesheet" href="css/zd-1.0.css">
-	<script type="text/javascript">
+<!-- <script type="text/javascript">
 function loadXMLDoc(){
 var xmlhttp;
 if (window.XMLHttpRequest)
@@ -32,8 +32,11 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","./sorts_in.php",true);
 xmlhttp.send();
 }
-</script>
-
+</script> -->
+<script src="./js/echarts.min.js"></script>
+<script src="../login/js/jquery-1.10.2.js"></script>
+<script src="js/nav.js"></script>
+<!-- <script src="js/nav1.js"></script> -->
 </head>
 <body>
 <nav>
@@ -61,27 +64,27 @@ xmlhttp.send();
 				</ul>
 		</li>
 		<li>
-			<a href="" class="active">清分数据核对<div class="carect"></div></a>
+			<a href="" class="">清分数据核对<div class="carect"></div></a>
 				<ul class="menu">
-					<li><a href="sorts.php">清分数据文件上传</a></li>
-					<li><a href="">古城寨二义性文件上传</a></li>
-					<li><a href="">仁和二义性文件上传</a></li>
+					<li id="qf"><a href="#" onclick="upLoad()">清分数据文件上传</a></li>
+					<li><a href="#">古城寨二义性文件上传</a></li>
+					<li><a href="#">仁和二义性文件上传</a></li>
 				</ul>
 		</li>
-		<li><a href="sortstemp.php">清分核对结果</a></li>
-		<li><a href="txf.php">通行费报表</a></li>
-		<li><a href="">查漏补缺</a></li>
-		<li><a href="">信息报送</a></li>
+		<li><a href="#">清分核对结果</a></li>
+		<li id="txf"><a href="txf.php" >通行费报表</a></li>
+		<li><a href="#">查漏补缺</a></li>
+		<li><a href="#">信息报送</a></li>
 		
                   
 	</ul>
 </nav>
 
-<h3 style="text-align: center;line-height: 200px">什么都木有<br><br></h3>
- <div id="myDiv"></div>
+
+ <div id="myDiv"><h3 style="text-align: center;line-height: 200px">什么都木有<br><br></h3></div>
 
 </body>
-<script src="../login/js/jquery-1.10.2.js"></script>
+
 <script>
 	$(document).click(function(){
 		$('.nav-list').removeClass('open')
