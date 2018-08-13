@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 $set=mysqli_query($conn,"SET @i=0");
-$renumber=mysqli_query($conn,"UPDATE sorts6_copy SET 序号=(@i:=@i+1)");//重新编制序号
+$renumber=mysqli_query($conn,"UPDATE sorts3_copy SET 序号=(@i:=@i+1)");//重新编制序号
 
 if ($set=true && $renumber=true) {
     echo '成功更新序号,正在进行数据比对';
@@ -25,7 +25,7 @@ echo '<br/>';
 echo '<br/>';
 
 
-$sql="select * from sorts6_copy";//sql语句
+$sql="select * from sorts3_copy";//sql语句
 $result=mysqli_query($conn,$sql);//执行SQL语句返回的结果
 $num=mysqli_num_rows($result);//统计执行结果影响的行数 这里表示该表的记录总数
 
@@ -35,7 +35,7 @@ $starttime = explode(' ',microtime());
 
 for ($i=1 ; $i <=$num ; $i++) {
     // $i=32678; 
-    $sql="select * from sorts6_copy where 序号={$i}";
+    $sql="select * from sorts3_copy where 序号={$i}";
     $result=mysqli_query($conn,$sql);
     $data=$result->fetch_all(MYSQLI_ASSOC);//$data 查询结果数组 
     $tag=$data[0]['车牌'];
@@ -60,16 +60,16 @@ for ($i=1 ; $i <=$num ; $i++) {
     echo $data[0]['出口时间'];
 
     if ($i==1) {//新建数据表
-        $sql="select * from sorts6_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";
+        $sql="select * from sorts3_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";
         $result=mysqli_query($conn,$sql);
         // $num1=mysqli_num_rows($result);
             if (mysqli_num_rows($result)>0) {//先判断拔山二义性是否有数据
-                $sql="create table sorts6_point as select * from sorts6_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";//如有则创建表并写入数据
+                $sql="create table sorts3_point as select * from sorts3_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";//如有则创建表并写入数据
                 $result=mysqli_query($conn,$sql);
                 echo "数据库创建成功，开始处理数据";
                 // continue;//跳出本次循环
             }else {
-                $sql="create table sorts6_point as select * from sorts6_copy left outer join ambren on ambren.tag='{$tag}' and '{$indate}'<ambren.date and  ambren.date<'{$outdate}' where 序号='{$id}' and ambren.tag<>'null' ";
+                $sql="create table sorts3_point as select * from sorts3_copy left outer join ambren on ambren.tag='{$tag}' and '{$indate}'<ambren.date and  ambren.date<'{$outdate}' where 序号='{$id}' and ambren.tag<>'null' ";
                 $result=mysqli_query($conn,$sql);//拔山二义性无数据，则判断仁和是否有数据，并写入数据库
 
                 echo '<br/>';
@@ -79,11 +79,11 @@ for ($i=1 ; $i <=$num ; $i++) {
                     }
                 } 
     }else {  //已建立数据表
-        $sql="select * from sorts6_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";
+        $sql="select * from sorts3_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";
         $result=mysqli_query($conn,$sql);
         // $num1=mysqli_num_rows($result);
             if (mysqli_num_rows($result) >0) {//先判断拔山二义性是否有数据
-                $sql="insert into sorts6_point select * from sorts6_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";//如有则插入数据
+                $sql="insert into sorts3_point select * from sorts3_copy left outer join ambba on ambba.tag='{$tag}' and '{$indate}'<ambba.date and  ambba.date<'{$outdate}' where 序号='{$id}' and ambba.tag<>'null'";//如有则插入数据
                 $result=mysqli_query($conn,$sql);
                 if ($result) {
                     echo "数据插入成功";
@@ -92,7 +92,7 @@ for ($i=1 ; $i <=$num ; $i++) {
                 }
                 // continue;//跳出本次循环
             }else {
-                $sql="insert into sorts6_point select * from sorts6_copy left outer join ambren on ambren.tag='{$tag}' and '{$indate}'<ambren.date and  ambren.date<'{$outdate}' where 序号='{$id}' and ambren.tag<>'null' ";
+                $sql="insert into sorts3_point select * from sorts3_copy left outer join ambren on ambren.tag='{$tag}' and '{$indate}'<ambren.date and  ambren.date<'{$outdate}' where 序号='{$id}' and ambren.tag<>'null' ";
                 $result=mysqli_query($conn,$sql);
                 if ($result) {
                     echo "数据插入成功";

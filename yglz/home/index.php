@@ -34,9 +34,10 @@ xmlhttp.send();
 }
 </script> -->
 <script src="./js/echarts.min.js"></script>
-<script src="../login/js/jquery-1.10.2.js"></script>
+<script src="../login/js/jquery-1.10.2.min.js"></script>
 <script src="js/nav.js"></script>
-<!-- <script src="js/nav1.js"></script> -->
+
+
 </head>
 <body>
 <nav>
@@ -72,9 +73,9 @@ xmlhttp.send();
 				</ul>
 		</li>
 		<li><a href="#">清分核对结果</a></li>
-		<li id="txf"><a href="txf.php" >通行费报表</a></li>
+		<li id="txf"><a href="txf.html" >通行费报表</a></li>
 		<li><a href="#">查漏补缺</a></li>
-		<li><a href="#">信息报送</a></li>
+		<li id="message"><a href="#">信息报送</a></li>
 		
                   
 	</ul>

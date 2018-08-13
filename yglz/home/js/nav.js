@@ -63,3 +63,9 @@ function txf(){
         xmlhttp.open("GET","./txf.html",true);
         xmlhttp.send();
     }
+
+  $(document).ready(function () {
+    $("#message").click(function () {
+        $('#myDiv').load('./sorts_in.php')
+    })
+  });

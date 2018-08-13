@@ -5,6 +5,15 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Document</title>
+	<script src="../login/js/jquery-1.10.2.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+		  $("#message").click(function(){
+			$('#myDiv').hide()
+		  });
+		});
+		</script>
 </head>
 <body>
 
@@ -28,7 +37,11 @@
 		    <input type="submit" name="submit" value="提交">
 	</form>
 
+	<form action="" >
+		<button id="message">test</button>
+		<div id="myDiv">This is script.</div>
 
+	</form>
 	
 	
 
