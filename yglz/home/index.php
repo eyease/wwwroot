@@ -9,35 +9,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Secret System</title>
 	<link rel="stylesheet" href="css/zd-1.0.css">
-<!-- <script type="text/javascript">
-function loadXMLDoc(){
-var xmlhttp;
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-    }
-  }
-xmlhttp.open("GET","./sorts_in.php",true);
-xmlhttp.send();
-}
-</script> -->
 <script src="./js/echarts.min.js"></script>
 <script src="../login/js/jquery-1.10.2.min.js"></script>
 <script src="js/nav.js"></script>
-
-
 </head>
 <body>
 <nav>
@@ -81,7 +57,7 @@ xmlhttp.send();
 	</ul>
 </nav>
 
-
+<!-- 显示区域 -->
  <div id="myDiv"><h3 style="text-align: center;line-height: 200px">什么都木有<br><br></h3></div>
 
 </body>
