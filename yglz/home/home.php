@@ -35,25 +35,25 @@
 	<!-- 菜单 -->
 	<ul class="nav-list">
                    <li ><?php echo $id;?></li>
-                   <li><a href="../logout.php">退出登录</a></li>
+                   <li id=logout><a href="#">退出登录</a></li>
 		<li id="index">
 			<a href="home.php" class="active">首页<div class="carect"></div></a>
 				<ul class="menu">
-					<li><a href="#">One</a></li>
-					<li><a href="#">Two</a></li>
+					<li id="one"><a href="#">One</a></li>
+					<li id="two"><a href="#">Two</a></li>
 				</ul>
 		</li>
 		<li>
 			<a href="" class="">清分数据核对<div class="carect"></div></a>
 				<ul class="menu">
 					<li id="qf"><a href="#">清分数据文件上传</a></li>
-					<li id=ambba><a href="#">古城寨二义性文件上传</a></li>
-					<li id=ambren><a href="#">仁和二义性文件上传</a></li>
+					<li id="ambba"><a href="#">古城寨二义性文件上传</a></li>
+					<li id="ambren"><a href="#">仁和二义性文件上传</a></li>
 				</ul>
 		</li>
-		<li id=qfkd><a href="#">清分核对结果</a></li>
+		<li id="qfkd"><a href="#">清分核对结果</a></li>
 		<li id="txf"><a href="txf.html" >通行费报表</a></li>
-		<li id=clbq><a href="#">查漏补缺</a></li>
+		<li id="clbq"><a href="#">查漏补缺</a></li>
 		<li id="message"><a href="#">信息报送</a></li>
 		
                   
@@ -61,7 +61,7 @@
 </nav>
 
 <!-- 显示区域 -->
- <div id="myDiv" class="main"><h3 style="text-align: center;line-height: 200px">什么都木有<br><br></h3></div>
+ <div id="myDiv" class="main"><h3 id="mydivtext" style="text-align: center;line-height: 200px">又不是不能用<br><br></h3></div>
 
 </body>
 

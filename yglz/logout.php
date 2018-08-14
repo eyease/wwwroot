@@ -1,3 +1,8 @@
+<?php 
+session_destroy();
+ ?>
+
+	
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +12,7 @@
 
 </head>
 <body>
-<script>alert('成功退出');window.location.href='./index.php';</script> 
+<script>alert('成功退出');window.location.href='../index.php';</script> 
 </body>
 </html>
 
-<?php 
-session_destroy();
- ?>
