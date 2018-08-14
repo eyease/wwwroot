@@ -27,7 +27,7 @@ if (isset($_POST['hidden']) && $_POST["hidden"]=="hidden") {
 		$num=mysqli_num_rows($result);
 		echo $num;
 		if ($num) {
-			echo "<script>alert('成功登录');window.location.href='./home/index.php';</script>";
+			echo "<script>alert('成功登录');window.location.href='./home/home.php';</script>";
 		}else{
 			echo "<script>alert ('用户名或密码不正确');history.go(-1);</script>";
 		}
