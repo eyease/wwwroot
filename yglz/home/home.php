@@ -43,6 +43,7 @@
 					<li id="two"><a href="#">Two</a></li>
 				</ul>
 		</li>
+		<li id="sfjx"><a href="#">收费员绩效考核</a></li>
 		<li>
 			<a href="" class="">清分数据核对<div class="carect"></div></a>
 				<ul class="menu">
@@ -52,7 +53,7 @@
 				</ul>
 		</li>
 		<li id="qfkd"><a href="#">清分核对结果</a></li>
-		<li id="txf"><a href="txf.html" >通行费报表</a></li>
+		<li id="txf"><a href="txf.html" >通行费数据</a></li>
 		<li id="clbq"><a href="#">查漏补缺</a></li>
 		<li id="message"><a href="#">信息报送</a></li>
 		

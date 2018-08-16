@@ -1,8 +1,35 @@
 
-    <form action="sorts/upload3.php" method="POST" enctype="multipart/form-data">
-    请选择你的上传文件：<br/>
+<form action="sorts/upload_sorts.php" method="POST" enctype="multipart/form-data">
+    请选择你的清分文件(Excel文件)：<br/>
+    <br>
+    <select name="year" value="上传">
+        <option name="2018" value="2018">2018
+        <option name="2019" value="2019">2019
+        <option name="2020" value="2020">2020
+    </select>
+    <select name="month" value="上传">
+      <option name="01" value="01">一月
+      <option name="02" value="02">二月
+      <option name="03" value="03">三月
+      <option name="04" value="04">四月
+      <option name="05" value="05">五月
+      <option name="06" value="06">六月
+      <option name="07" value="07">七月
+      <option name="08" value="08">八月
+      <option name="09" value="09">九月
+      <option name="10" value="10">十月
+      <option name="11" value="11">十一月
+      <option name="12" value="12">十二月
+    </select>
+    <select name="tendays">
+        <option name="firstten" value="firstten">上旬
+        <option name="middleten" value="middleten">中旬    
+        <option name="lastten" value="lastten">下旬
+    </select>
+    <br>
         <!-- <input type="hidden" name="MAX_FILE_SIZE" value="101321"> -->
         <input type="file" name="myFile" ><br>
         <!-- accept="image/jpeg,text/html" -->
-        <input type="submit" value="上传">
-    </form>
+        <input type="submit" name="upload" value="上传">
+</form>
+

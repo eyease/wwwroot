@@ -1,18 +1,9 @@
+
+
 <?php
-function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array('jpeg','jpg','tif','png')){  //封装file_info,path,maxsize,allowExe  作为类来使用
+function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array('jpeg','jpg','tif','png'),$year,$month,$tendays){  //封装file_info,path,maxsize,allowExe  作为类来使用   //增加日期信息
     // header("content-type:text/html:charset=utf-8");
     header('Content-Type:text/plain;charset=utf-8');
-    //文件处理程序
-    //$_FILES文件上传变了
-
-    // echo"<pre>";
-    // var_dump($_FILES);
-    // exit;
-    // echo"</pre>"
-
-    //处理上传文件
-    // $file_info=$_FILES["myFile"];
-
     $file_name=$file_info["name"];//不同的方法取得文件名
     $file_type=$file_info["type"];
     $file_tmp_name=$file_info["tmp_name"];
@@ -37,7 +28,7 @@ function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array
     }
 
     //得到唯一的文件名，防止因重名而覆盖
-    $uniName=md5(uniqid(microtime(true),true)).".$ext"; //MD5加密 ，uniqid产生唯一id，microtime做前缀
+    $uniName="$year"."-"."$month"."-"."$tendays"."-".md5(uniqid(microtime(true),true)).".$ext"; //MD5加密 ，uniqid产生唯一id，microtime做前缀
     $destination=$path."/".$uniName; //目标存放文件地址
 
     //当文件上传成功，存入临时目录 ，服务器开始判断
@@ -51,12 +42,13 @@ function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array
         if (!is_uploaded_file($file_tmp_name)) {
             exit("上传方式有误，请使用POST方法");
         }
-        if (!getimagesize($file_tmp_name)) {
-            exit("不是真正的图片类型");
-        }
+        // if (!getimagesize($file_tmp_name)) {
+        //     exit("不是真正的图片类型");
+        // }
         //错误判断，报告原因
         if (@move_uploaded_file($file_tmp_name,$destination)) {   //用@抑制错误，不让用户看到警告
             echo "文件".$file_name."上传成功！"."\n\n";
+            
             // echo "\n";
         }else {
             echo "文件".$file_name."上传失败！"."\n\n";
@@ -82,8 +74,11 @@ function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array
         }
     }
     return $destination;  //用封装就要return,返回最终存放的结果
+    echo "<script>alert('完成，请返回主页');window.location.href='../../login/login.html';</script>";
 }
 
 
 
 ?>
+
+
