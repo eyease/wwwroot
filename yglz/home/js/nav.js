@@ -1,8 +1,13 @@
 
 
+// $(document).ready(function () {
+//   $("#qf").click(function () {
+//       $('#myDiv').load('./sorts/qf_upload.html')
+//   })
+// });
 $(document).ready(function () {
   $("#qf").click(function () {
-      $('#myDiv').load('./sorts/qf_upload.html')
+      window.open('./sorts/qf_upload.html','newwindow','height=500, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
   })
 });
 
