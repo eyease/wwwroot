@@ -74,7 +74,7 @@ function uploadFile($file_info,$path="uploads",$maxsize=10485760,$allowExt=array
         }
     }
     return $destination;  //用封装就要return,返回最终存放的结果
-    echo "<script>alert('完成，请返回主页');window.location.href='../../login/login.html';</script>";
+    
 }
 
 
