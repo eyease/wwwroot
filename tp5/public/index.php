@@ -13,7 +13,12 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
-//定义配置目录
+//定义配置目录 
 define('CONF_PATH', __DIR__ . '/../config/');
+//定义配置文件类型
+// define('CONF_EXT','.ini');
+// define('CONF_EXT','.xml');
+
+
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
