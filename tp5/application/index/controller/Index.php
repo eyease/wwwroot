@@ -63,4 +63,7 @@ class Index extends Controller
         Config::range('_sys_');
         dump(Config::get());
     }
+    public function demo($user){
+        return '../view/index/hello.html'.$user;
+    }
 }
