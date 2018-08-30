@@ -10,4 +10,7 @@ Desktop.ini
 /yglz/home/sorts/upload-class/*
 /yglz/home/sorts/uploads-sorts/*
 
+#composer
+/yglz/vendor/*
+
 
