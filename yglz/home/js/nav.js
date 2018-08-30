@@ -1,13 +1,16 @@
 
-
-// $(document).ready(function () {
-//   $("#qf").click(function () {
-//       $('#myDiv').load('./sorts/qf_upload.html')
-//   })
-// });
+//清分数据上传
 $(document).ready(function () {
   $("#qf").click(function () {
       window.open('./sorts/qf_upload.html','newwindow','height=500, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+  })
+});
+
+
+//身份证维护
+$(document).ready(function () {
+  $("#userdb").click(function () {
+      $('#myDiv').load('./userdb.php')
   })
 });
 

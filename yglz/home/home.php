@@ -43,7 +43,22 @@
 					<li id="two"><a href="#">Two</a></li>
 				</ul>
 		</li>
-		<li id="sfjx"><a href="#">收费员绩效考核</a></li>
+		<!-- <li id="sfjx"><a href="#">收费员绩效考核</a>
+			<ul class="menu">
+				<li id="kq"><a href="#">绩效考勤</a></li>
+				<li id="ri"><a href="#">日段报</a></li>
+				<li id="user"><a href="#">身份证维护</a></li>
+			</ul>
+		</li> -->
+		<li>
+			<a href="" class="">收费员绩效考核<div class="carect"></div></a>
+				<ul class="menu">
+					<li id="kq"><a href="#">绩效考勤</a></li>
+					<li id="ri"><a href="#">日段报</a></li>
+					<li id="userdb"><a href="#">身份证维护</a></li>
+				</ul>
+		</li>
+
 		<li>
 			<a href="" class="">清分数据核对<div class="carect"></div></a>
 				<ul class="menu">
@@ -52,17 +67,18 @@
 					<li id="ambren"><a href="#">仁和二义性文件上传</a></li>
 				</ul>
 		</li>
-		<li id="qfkd"><a href="#">清分核对结果</a></li>
+		<!-- <li id="qfkd"><a href="#">清分核对结果</a></li> -->
 		<li id="txf"><a href="txf.html" >通行费数据</a></li>
 		<li id="clbq"><a href="#">查漏补缺</a></li>
 		<li id="message"><a href="#">信息报送</a></li>
+		
 		
                   
 	</ul>
 </nav>
 
 <!-- 显示区域 -->
- <div id="myDiv" class="main"><h3 id="mydivtext" style="text-align: center;line-height: 200px">又不是不能用<br><br></h3></div>
+ <div id="myDiv"><h3 id="mydivtext" style="text-align: center;line-height: 200px">又不是不能用<br><br></h3></div>
 
 </body>
 
